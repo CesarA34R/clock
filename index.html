@@ -1,92 +1,141 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Relógio Unimed</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f3f7f4;
+    font-family:'Inter',sans-serif;
+}
+
+.DPDC{
+    display:flex !important;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:380px;
+    padding:32px !important;
+    background:#ffffff !important;
+    border:none !important;
+    border-radius:24px !important;
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.05),
+        0 1px 3px rgba(0,0,0,0.04);
+}
+
+.DPDCh{
+    color:#00995d !important;
+    font-size:22px !important;
+    font-weight:600 !important;
+    margin-bottom:18px !important;
+    text-align:center;
+}
+
+.DPDCt{
+    color:#1e1e1e !important;
+    font-size:64px !important;
+    font-weight:600 !important;
+    letter-spacing:-2px;
+}
+
+.DPDCd{
+    margin-top:12px !important;
+    color:#6f6f6f !important;
+    font-size:18px !important;
+    font-weight:500 !important;
+}
+
+.DPDCt12{
+    color:#00995d !important;
+    font-size:22px !important;
+    margin-left:6px;
+}
+
+.DPl{
+    display:none !important;
+}
+
+@media(max-width:480px){
+
+    .DPDC{
+        width:95%;
+        padding:24px !important;
     }
 
-    body{
-        height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background:#f4f7f5;
-        font-family:'Inter', sans-serif;
+    .DPDCt{
+        font-size:52px !important;
     }
 
-    .clock-wrapper{
-        background:#ffffff;
-        padding:28px;
-        border-radius:24px;
-        box-shadow:
-            0 4px 20px rgba(0,0,0,0.06);
-        border:1px solid rgba(0, 130, 72, 0.08);
-        width:fit-content;
-    }
+}
 
-    .clock-header{
-        text-align:center;
-        margin-bottom:18px;
-    }
-
-    .clock-header h1{
-        color:#008248;
-        font-size:18px;
-        font-weight:600;
-        letter-spacing:0.5px;
-    }
-
-    .clock-header p{
-        color:#7a7a7a;
-        font-size:13px;
-        margin-top:4px;
-    }
-
-    iframe{
-        border:none;
-        overflow:hidden;
-        border-radius:16px;
-    }
-
-    @media(max-width:600px){
-        .clock-wrapper{
-            width:95%;
-            padding:18px;
-        }
-
-        iframe{
-            width:100%;
-        }
-    }
 </style>
 </head>
 
 <body>
 
-<div class="clock-wrapper">
+<!--Dayspedia.com widget-->
+<div class="DPDC"
+     cityid="9743"
+     lang="pt"
+     id="dayspedia_widget_43e00ace40569a1"
+     host="https://dayspedia.com"
+     ampm="true"
+     nightsign="false"
+     sun="false">
 
-    <div class="clock-header">
-        <h1>Horário Atual</h1>
-        <p>Marília • São Paulo</p>
+    <div class="DPDCh">
+        Horário Atual em Marília
     </div>
 
-    <iframe
-        src="https://dayspedia.com/if/digit/?v=1&iframe=eyJ3LTEyIjp0cnVlLCJ3LTExIjp0cnVlLCJ3LTEzIjp0cnVlLCJ3LTE0IjpmYWxzZSwidy0xNSI6ZmFsc2UsInctMTEwIjpmYWxzZSwidy13aWR0aC0wIjp0cnVlLCJ3LXdpZHRoLTEiOmZhbHNlLCJ3LXdpZHRoLTIiOmZhbHNlLCJ3LTE2IjoiMjRweCIsInctMTkiOiI0OCIsInctMTciOiIxNiIsInctMjEiOnRydWUsImJnaW1hZ2UiOi0xLCJiZ2ltYWdlU2V0IjpmYWxzZSwidy0yMWMwIjoiI2ZmZmZmZiIsInctMCI6dHJ1ZSwidy0zIjp0cnVlLCJ3LTNjMCI6IiMzNDM0MzQiLCJ3LTNiMCI6IjEiLCJ3LTYiOiIjMzQzNDM0Iiwidy0yMCI6dHJ1ZSwidy00IjoiIzAwN2RiZiIsInctMTgiOmZhbHNlLCJ3LXdpZHRoLTJjLTAiOiIzMDAiLCJ3LTExNSI6ZmFsc2V9&lang=pt&cityid=9743"
-        width="320"
-        height="120"
-        scrolling="no">
-    </iframe>
+    <div class="DPDCt">
+        <span class="DPDCth">2</span>
+        <span class="DPDCtm">06</span>
+        <span class="DPDCts">02</span>
+        <span class="DPDCt12">pm</span>
+    </div>
+
+    <div class="DPDCd">
+        <span class="DPDCdt">quinta-feira, 28 de maio</span>
+    </div>
+
+    <script>
+        var s, t;
+        s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//cdn.dayspedia.com/js/dwidget.min.vc84b5f7d.js";
+
+        t = document.getElementsByTagName('script')[0];
+        t.parentNode.insertBefore(s, t);
+
+        s.onload = function() {
+            window.dwidget = new window.DigitClock();
+            window.dwidget.init("dayspedia_widget_43e00ace40569a1");
+        };
+    </script>
 
 </div>
+<!--/DPDC-->
 
 </body>
 </html>
+```
